@@ -1,0 +1,93 @@
+/*variables*/
+
+$anchurita: 100%;
+$alturin: 350px;
+
+/*importados*/
+
+@import "animaciones";
+@import "boxmodel";
+@import "estilos";
+@import "flexbox";
+@import "grids";
+@import "responsive";
+
+/*extend*/
+
+
+.li-deco{
+    font-size: 1rem;
+    text-decoration: underline;
+    color: white;
+    font-weight: bold;
+    padding-bottom: 0px
+
+    
+}
+
+.li-deco-red{
+    @extend .li-deco;
+    color: red;
+    padding-bottom: 12px;
+}
+
+.li-deco-redtbf{
+    @extend .li-deco;
+    color: firebrick;
+    padding-bottom: 12px;
+}
+
+.li-deco-redred{
+    @extend .li-deco;
+    color: rgb(73, 24, 24);
+    padding-bottom: 12px;
+}
+
+/*mixin*/
+
+@mixin tamaño($anchurita, $alturin) {
+    width: $anchurita;
+    height: $alturin;
+}
+
+footer {
+    @include tamaño($anchurita, 270px)
+}
+
+/*each*/
+
+@each $secciones in body, header, main{
+
+    #{$secciones}{
+    background: #e65c00;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F9D423, #e65c00);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F9D423, #e65c00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+         
+    }
+}
+
+/*maps*/
+
+$mapa:(
+    twitter:  rgb(35, 144, 180),
+    instagram:  purple,
+    
+    );
+
+    /*maps con each*/
+
+    @each $nombres, $colorcito in $mapa{
+
+        .redes-#{$nombres}{
+           background-color: $colorcito;
+    }
+}
+
+
+section twitter{
+    background-color: map-get($mapa, twitter);
+}
+
+section instagram{
+    background-color: map-get($mapa, instagram);
+}

@@ -1,0 +1,35 @@
+/*BOX MODEL*/
+
+.ancho {
+    width: 100%
+}
+
+.alto{
+    height: 550px;
+}
+
+img {
+    width: 100%;
+}
+
+/*
+.margen {
+    margin-top: 20px;
+    margin-left: 110px ;
+    margin-right: 20px;
+    margin-bottom: 20px; ;
+}
+.margeninterno {
+    padding-top: 30px ;
+    padding-left: 50px ;
+    padding-right: 50px;
+    padding-bottom: 30px ;
+}
+*/
+.borde {
+    border-top: 2px;
+    border-right: 2px;
+    border-left: 2px;
+    border-bottom: 2px ;
+    color: black;
+}

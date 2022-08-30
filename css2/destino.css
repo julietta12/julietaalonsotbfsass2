@@ -1,0 +1,464 @@
+/*variables*/
+/*importados*/
+/***anidamiento****/
+/**.TRACISIONES.*/
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Staatliches&display=swap");
+.transicion {
+  transition: width 1s;
+}
+.transicion:hover {
+  width: 400px;
+  background-color: rgb(246, 222, 179);
+}
+
+/**.ANIMACIONES.*/
+.image {
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.image:hover {
+  transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  -o-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-box-shadow: 3px 3px 5px #000;
+  -moz-box-shadow: 3px 3px 5px #000;
+  box-shadow: 3px 3px 5px #000;
+  -webkit-backface-visibility: hidden;
+}
+
+/*BOX MODEL*/
+.ancho {
+  width: 100%;
+}
+
+.alto {
+  height: 550px;
+}
+
+img {
+  width: 100%;
+}
+
+/*
+.margen {
+    margin-top: 20px;
+    margin-left: 110px ;
+    margin-right: 20px;
+    margin-bottom: 20px; ;
+}
+.margeninterno {
+    padding-top: 30px ;
+    padding-left: 50px ;
+    padding-right: 50px;
+    padding-bottom: 30px ;
+}
+*/
+.borde {
+  border-top: 2px;
+  border-right: 2px;
+  border-left: 2px;
+  border-bottom: 2px;
+  color: black;
+}
+
+/*variable*/
+/*ESTILOS GENERALES*/
+/*IMPORTADOS*/
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-fwd-center {
+  0% {
+    transform: translateZ(0);
+  }
+  100% {
+    transform: translateZ(160px);
+  }
+}
+/* ESTILOS BODY */
+body {
+  font-family: "Staatliches", cursive;
+}
+
+/* ESTILOS HEADER */
+h1 {
+  color: white;
+  font-size: 80px;
+  text-align: center;
+  border: groove 2px white;
+  border-radius: 3px;
+}
+
+h2 {
+  font-family: "Staatliches", cursive;
+  color: white;
+  font-size: 3.5rem;
+  text-align: center;
+  text-decoration: underline;
+}
+
+h3 {
+  padding: 20px;
+  font-size: 2rem;
+  font-family: "Staatliches", cursive;
+  background-color: firebrick;
+  color: rgba(255, 255, 0, 0.71);
+  text-align: center;
+}
+
+form {
+  color: beige;
+  border: inset 2px firebrick;
+  background-color: firebrick;
+  font-size: 1rem;
+  border-radius: 3px;
+}
+
+#uno {
+  font-family: "Staatliches", cursive;
+  font-size: 50px;
+  text-align: center;
+  color: white;
+}
+
+#dos {
+  width: 450px;
+  height: 460px;
+}
+
+/*Clases*/
+.image-burguer {
+  width: 700px;
+}
+
+.image-burguers {
+  width: 1520px;
+}
+
+.redes {
+  margin: 20px;
+}
+
+footer {
+  background-color: orangered;
+  margin-top: 20px;
+}
+
+/* FLEX BOX */
+.is-flex {
+  display: flex;
+}
+
+.is-flex-flow {
+  flex-flow: nowrap;
+}
+
+.is-justify-center {
+  justify-content: center;
+}
+
+.is-align-center {
+  align-items: center;
+}
+
+.is-align-start {
+  align-items: flex-start;
+}
+
+.is-column {
+  flex-direction: column;
+}
+
+.img-wrapper {
+  width: 60%;
+  padding: 20px;
+  border: inset 2px firebrick;
+  background-color: firebrick;
+  border-radius: 3px;
+}
+
+.is-align-end {
+  align-items: flex-end;
+}
+
+.texto-wrapper {
+  width: 40%;
+  padding: 20px;
+}
+
+.flex-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grid-area1 {
+  display: grid;
+  grid-template-areas: "img1 img2" "img3 img4" "img5 img6";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 33, 3% 33, 3% 33, 3%;
+  gap: 100px;
+}
+
+.grid-area2 {
+  display: grid;
+  grid-template-areas: "img1 img2" "img3 img4";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50% 50%;
+  gap: 100px;
+}
+
+.grid-area3 {
+  display: grid;
+  grid-template-areas: "img1 img2";
+  grid-template-columns: 1fr;
+  grid-template-rows: 50% 50%;
+  gap: 100px;
+}
+
+.img1 {
+  grid-area: img1;
+}
+
+.img2 {
+  grid-area: img2;
+}
+
+.img3 {
+  grid-area: img3;
+}
+
+.img4 {
+  grid-area: img4;
+}
+
+.img5 {
+  grid-area: img5;
+}
+
+.img6 {
+  grid-area: img6;
+}
+
+/* RESPONSIVE DESIGN */
+/*DESKTOP*/
+@media (min-width: 1024px) {
+  .grid-area1 {
+    display: grid;
+    grid-template-areas: "img1 img2" "img3 img4" "img5 img6";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 33, 3% 33, 3% 33, 3%;
+    gap: 100px;
+  }
+  .grid-area2 {
+    display: grid;
+    grid-template-areas: "img1 img2" "img3 img4";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50% 50%;
+    gap: 100px;
+  }
+  .grid-area3 {
+    display: grid;
+    grid-template-areas: "img1 img2";
+    grid-template-columns: 1fr;
+    grid-template-rows: 50% 50%;
+    gap: 100px;
+  }
+  .img1 {
+    grid-area: img1;
+  }
+  .img2 {
+    grid-area: img2;
+  }
+  .img3 {
+    grid-area: img3;
+  }
+  .img4 {
+    grid-area: img4;
+  }
+  .img5 {
+    grid-area: img5;
+  }
+  .img6 {
+    grid-area: img6;
+  }
+}
+/*TABLET*/
+@media (min-width: 600px) and (max-width: 1023px) {
+  .grid-area1 {
+    display: grid;
+    grid-template-areas: "img1" "img2" "img3" "img4" "img5" "img6";
+    grid-template-columns: 1fr;
+    grid-template-rows: 16, 66% 16, 66% auto;
+    gap: 100px;
+  }
+  .grid-area2 {
+    display: grid;
+    grid-template-areas: "img1" "img2" "img3" "img4";
+    grid-template-columns: 1fr;
+    grid-template-rows: 25% 25% 25% 25%;
+    gap: 100px;
+  }
+  .grid-area3 {
+    display: grid;
+    grid-template-areas: "img1" "img2";
+    grid-template-columns: 1fr;
+    grid-template-rows: 50% 50%;
+    gap: 100px;
+  }
+  .img1 {
+    grid-area: img1;
+  }
+  .img2 {
+    grid-area: img2;
+  }
+  .img3 {
+    grid-area: img3;
+  }
+  .img4 {
+    grid-area: img4;
+  }
+  .img5 {
+    grid-area: img5;
+  }
+  .img6 {
+    grid-area: img6;
+  }
+}
+/*SMARTPHONE*/
+@media (max-width: 599px) {
+  .grid-area1 {
+    display: grid;
+    grid-template-areas: "img1" "img2" "img3" "img4" "img5" "img6";
+    grid-template-columns: 1fr;
+    grid-template-rows: 16, 66% 16, 66% 16, 66% 16, 66% 16, 66% 16, 66%;
+    gap: 100px;
+  }
+  .grid-area2 {
+    display: grid;
+    grid-template-areas: "img1" "img2" "img3" "img4";
+    grid-template-columns: 1fr;
+    grid-template-rows: 25% 25% 25% 25%;
+    gap: 100px;
+  }
+  .grid-area3 {
+    display: grid;
+    grid-template-areas: "img1 img2";
+    grid-template-columns: 1fr;
+    grid-template-rows: 50% 50%;
+    gap: 100px;
+  }
+  .img1 {
+    grid-area: img1;
+  }
+  .img2 {
+    grid-area: img2;
+  }
+  .img3 {
+    grid-area: img3;
+  }
+  .img4 {
+    grid-area: img4;
+  }
+  .img5 {
+    grid-area: img5;
+  }
+  .img6 {
+    grid-area: img6;
+  }
+}
+/*extend*/
+.li-deco, .li-deco-redred, .li-deco-redtbf, .li-deco-red {
+  font-size: 1rem;
+  text-decoration: underline;
+  color: white;
+  font-weight: bold;
+  padding-bottom: 0px;
+}
+
+.li-deco-red {
+  color: red;
+  padding-bottom: 12px;
+}
+
+.li-deco-redtbf {
+  color: firebrick;
+  padding-bottom: 12px;
+}
+
+.li-deco-redred {
+  color: rgb(73, 24, 24);
+  padding-bottom: 12px;
+}
+
+/*mixin*/
+footer {
+  width: 100%;
+  height: 270px;
+}
+
+/*each*/
+body {
+  background: #e65c00; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #F9D423, #e65c00); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #F9D423, #e65c00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+header {
+  background: #e65c00; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #F9D423, #e65c00); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #F9D423, #e65c00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+main {
+  background: #e65c00; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #F9D423, #e65c00); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #F9D423, #e65c00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/*maps*/
+/*maps con each*/
+.redes-twitter {
+  background-color: rgb(35, 144, 180);
+}
+
+.redes-instagram {
+  background-color: purple;
+}
+
+section twitter {
+  background-color: rgb(35, 144, 180);
+}
+
+section instagram {
+  background-color: purple;
+}
+
+/*# sourceMappingURL=destino.css.map */
